@@ -17,11 +17,13 @@ export default defineConfig(({mode}) => {
           short_name: 'Adoração',
           description: 'E-book Discipulado em Adoração por Marcio Gonçalves',
           theme_color: '#fefcfb',
+          background_color: '#fefcfb',
           icons: [
             {
-              src: 'pwa-icon.svg',
-              sizes: '192x192 512x512',
-              type: 'image/svg+xml'
+              src: 'boy.png',
+              sizes: '192x192 384x384 512x512',
+              type: 'image/png',
+              purpose: 'any maskable'
             }
           ]
         }
