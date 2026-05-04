@@ -221,7 +221,7 @@ export function AdminArea() {
                               {profile.is_approved ? <><X size={14}/> Bloquear</> : <><Check size={14}/> Liberar Acesso</>}
                             </button>
                             
-                            {profile.id !== user?.id && (
+                            {profile.id !== user?.uid && (
                               <button 
                                 onClick={() => setDeletingId(profile.id)}
                                 className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition"

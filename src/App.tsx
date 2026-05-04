@@ -11,6 +11,7 @@ import { Reader } from './pages/Reader';
 import { Contact } from './pages/Contact';
 import { Login } from './pages/Login';
 import { AdminArea } from './pages/AdminArea';
+import { MyReflections } from './pages/MyReflections';
 import { AuthProvider } from './contexts/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 
@@ -79,6 +80,11 @@ export default function App() {
               <Route path="/reader/:chapterId" element={
                 <ProtectedRoute>
                   <Reader />
+                </ProtectedRoute>
+              } />
+              <Route path="/my-reflections" element={
+                <ProtectedRoute>
+                  <MyReflections />
                 </ProtectedRoute>
               } />
               <Route path="/contact" element={<Contact />} />

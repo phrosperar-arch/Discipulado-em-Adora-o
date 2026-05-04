@@ -19,9 +19,8 @@ service cloud.firestore {
         && data.email is string 
         && data.email.size() <= 200
         && data.is_approved is bool
-        && data.get('full_name', '') is string
-        && data.get('full_name', '').size() <= 100
-        && (data.email == request.auth.token.email);
+        && (data.get('full_name', '') is string || data.get('full_name', null) == null)
+        && data.get('full_name', '').size() <= 100;
     }
     
     function isValidAdmin(data) {
@@ -38,14 +37,15 @@ service cloud.firestore {
       allow create: if isOwner(userId)
                     && (incoming().keys().hasAll(['email', 'is_approved']) && incoming().keys().size() >= 2 && incoming().keys().size() <= 3)
                     && isValidProfile(incoming(), userId)
-                    && incoming().is_approved == false; // Users can't approve themselves initially (will be controlled below or admins can bypass using isAdmin() check in update)
+                    && incoming().email == request.auth.token.email
+                    && incoming().is_approved == false; // Users can't approve themselves initially
       
-      allow update: if (isAdmin() && isValidProfile(incoming(), userId)) ||
+      allow update: if (isAdmin() && isValidProfile(incoming(), userId) && incoming().email == existing().email) ||
                     (
                       isOwner(userId) 
                       && isValidProfile(incoming(), userId)
+                      && incoming().email == existing().email
                       && incoming().diff(existing()).affectedKeys().hasOnly(['full_name']) 
-                      // cannot change approval status
                     );
 
       allow delete: if isAdmin();
@@ -63,6 +63,18 @@ service cloud.firestore {
                             && isValidAdmin(incoming());
                             
       allow delete: if isAdmin();
+    }
+    function isValidReflection(data) {
+      return data.keys().hasAll(['content']) 
+        && data.content is string
+        && data.get('updatedAt', '') is string
+        && data.get('question', '') is string;
+    }
+
+    match /users/{userId}/reflections/{reflectionId} {
+      allow read: if isOwner(userId);
+      allow create, update: if isOwner(userId) && isValidReflection(incoming());
+      allow delete: if isOwner(userId);
     }
   }
 }

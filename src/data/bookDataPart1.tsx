@@ -1,5 +1,6 @@
 import React from 'react';
 import { VerseQuote } from '../components/ui/VerseQuote';
+import { ReflectionInput } from '../components/ui/ReflectionInput';
 import { HighlightBox } from '../components/ui/HighlightBox';
 import { ActionBox } from '../components/ui/ActionBox';
 import { Chapter } from './bookData';
@@ -101,15 +102,15 @@ export const bookData: Chapter[] = [
           <ul className="list-none space-y-6 font-medium">
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Do que acha que deve se arrepender?</span>
-              <div className="w-full h-16 border-b border-gray-300 dark:border-zinc-700 mt-2 rounded bg-white/50 dark:bg-zinc-900/50"></div>
+              <ReflectionInput question="Do que acha que deve se arrepender?" id="p1_div_q_1" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• O que sente que deve pedir a Deus agora?</span>
-              <div className="w-full h-16 border-b border-gray-300 dark:border-zinc-700 mt-2 rounded bg-white/50 dark:bg-zinc-900/50"></div>
+              <ReflectionInput question="O que sente que deve pedir a Deus agora?" id="p1_div_q_2" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Como acredita que Cristo e sua obra te ajuda nisso?</span>
-              <div className="w-full h-16 border-b border-gray-300 dark:border-zinc-700 mt-2 rounded bg-white/50 dark:bg-zinc-900/50"></div>
+              <ReflectionInput question="Como acredita que Cristo e sua obra te ajuda nisso?" id="p1_div_q_3" placeholder="Escreva sua reflexão aqui..." />
             </li>
           </ul>
         </ActionBox>
@@ -198,7 +199,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-4">No fundo do seu coração, você acha que Deus deveria te amar? Te salvar? Te abençoar? Te dar uma vida boa ou melhor?</p>
-          <textarea className="w-full h-24 border border-rose-200 dark:border-zinc-700 mt-2 p-3 rounded-lg bg-white/80 dark:bg-zinc-900/80 text-gray-800 dark:text-gray-200 resize-none focus:outline-none focus:ring-2 focus:ring-rose-500/50 transition shadow-sm text-[0.95rem] font-sans placeholder:text-[#a1a1aa] dark:placeholder:text-[#52525b]" placeholder="Escreva sua reflexão aqui..."></textarea>
+          <ReflectionInput question="No fundo do seu coração, você acha que Deus deveria te amar? Te salvar? Te abençoar? Te dar uma vida boa ou melhor?" id="p1_txt_q_10" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <p className="mb-2 mt-6"><strong className="text-rose-700 dark:text-rose-400 uppercase">APLICAÇÃO</strong></p>
@@ -208,15 +209,15 @@ export const bookData: Chapter[] = [
           <ul className="list-none space-y-6 font-medium">
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Do que acha que deve se arrepender?</span>
-              <div className="w-full h-16 border-b border-gray-300 dark:border-zinc-700 mt-2 rounded bg-white/50 dark:bg-zinc-900/50"></div>
+              <ReflectionInput question="Do que acha que deve se arrepender?" id="p1_div_q_4" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• O que sente que deve pedir a Deus agora?</span>
-              <div className="w-full h-16 border-b border-gray-300 dark:border-zinc-700 mt-2 rounded bg-white/50 dark:bg-zinc-900/50"></div>
+              <ReflectionInput question="O que sente que deve pedir a Deus agora?" id="p1_div_q_5" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Como acredita que Cristo e sua obra te ajuda nisso?</span>
-              <div className="w-full h-16 border-b border-gray-300 dark:border-zinc-700 mt-2 rounded bg-white/50 dark:bg-zinc-900/50"></div>
+              <ReflectionInput question="Como acredita que Cristo e sua obra te ajuda nisso?" id="p1_div_q_6" placeholder="Escreva sua reflexão aqui..." />
             </li>
           </ul>
         </ActionBox>
@@ -250,7 +251,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2">Como você se identifica com isso?</p>
-          <textarea className="w-full h-24 border border-rose-200 dark:border-zinc-700 mt-2 p-3 rounded-lg bg-white/80 dark:bg-zinc-900/80 text-gray-800 dark:text-gray-200 resize-none focus:outline-none focus:ring-2 focus:ring-rose-500/50 transition shadow-sm text-[0.95rem] font-sans placeholder:text-[#a1a1aa] dark:placeholder:text-[#52525b]" placeholder="Escreva sua reflexão aqui..."></textarea>
+          <ReflectionInput question="Como você se identifica com isso?" id="p1_txt_q_11" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <h3 className="text-xl font-bold mb-4 mt-10 text-rose-700 dark:text-rose-400 uppercase">SEU CORPO PODE FAZER O QUE O SEU CORAÇÃO NÃO DESEJA.</h3>
@@ -262,13 +263,13 @@ export const bookData: Chapter[] = [
         <VerseQuote text='“Este povo me honra com os lábios, mas o seu coração está longe de mim. Em vão me adoram..."' refText="Mt.15.8" />
         <VerseQuote text='“O meu povo vem a você, como costuma fazer, e se assenta diante de você para ouvir as suas palavras, mas não as põe em prática. Com a boca eles expressam devoção, mas o coração deles está ávido de ganhos injustos.”' refText="Ez.33.31" />
         
-        <ul className="list-decimal pl-5 space-y-3 mb-8" start={3}>
+        <ul className="list-decimal pl-5 space-y-3 mb-8">
           <li>Ou seja, deveria, mas nem sempre há uma sincronia entre o coração (espírito) e o corpo. É muito fácil adorar a Deus com os lábios ou com o corpo sem adorá-lo com o coração. E para Cristo, isso não é adoração verdadeira.</li>
         </ul>
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2">Como você se identifica com isso?</p>
-          <textarea className="w-full h-24 border border-rose-200 dark:border-zinc-700 mt-2 p-3 rounded-lg bg-white/80 dark:bg-zinc-900/80 text-gray-800 dark:text-gray-200 resize-none focus:outline-none focus:ring-2 focus:ring-rose-500/50 transition shadow-sm text-[0.95rem] font-sans placeholder:text-[#a1a1aa] dark:placeholder:text-[#52525b]" placeholder="Escreva sua reflexão aqui..."></textarea>
+          <ReflectionInput question="Como você se identifica com isso?" id="p1_txt_q_12" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <h3 className="text-xl font-bold mb-4 mt-10 text-rose-700 dark:text-rose-400 uppercase">ADORAÇÃO EM ESPÍRITO É O DESEJO CONQUISTADO PELO DEUS ENCANTADOR.</h3>
@@ -279,14 +280,14 @@ export const bookData: Chapter[] = [
 
         <p className="mb-4 font-bold text-center text-rose-700 dark:text-rose-400">Seus sentimentos por Deus autenticam sua adoração.</p>
 
-        <ul className="list-decimal pl-5 space-y-3 mb-4" start={3}>
+        <ul className="list-decimal pl-5 space-y-3 mb-4">
           <li>Como podemos realinhar nosso coração a uma adoração em espírito?</li>
         </ul>
         <VerseQuote text="Rasgai Os Vossos Corações E Não As Vossas Vestes" refText="Jl.2.13" />
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2">O que o Senhor está corrigindo aqui?</p>
-          <textarea className="w-full h-24 border border-rose-200 dark:border-zinc-700 mt-2 p-3 rounded-lg bg-white/80 dark:bg-zinc-900/80 text-gray-800 dark:text-gray-200 resize-none focus:outline-none focus:ring-2 focus:ring-rose-500/50 transition shadow-sm text-[0.95rem] font-sans placeholder:text-[#a1a1aa] dark:placeholder:text-[#52525b]" placeholder="Escreva sua reflexão aqui..."></textarea>
+          <ReflectionInput question="O que o Senhor está corrigindo aqui?" id="p1_txt_q_13" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <p className="mb-4 mt-8 italic">Há três situações nas quais seus sentimentos autenticam sua adoração a Deus:</p>
@@ -300,11 +301,11 @@ export const bookData: Chapter[] = [
           <div className="space-y-6">
             <div>
               <p className="mb-2 text-rose-700 dark:text-rose-400 font-bold">• A sua realidade representa algo diferente desses três?</p>
-              <textarea className="w-full h-24 border border-rose-200 dark:border-zinc-700 mt-2 p-3 rounded-lg bg-white/80 dark:bg-zinc-900/80 text-gray-800 dark:text-gray-200 resize-none focus:outline-none focus:ring-2 focus:ring-rose-500/50 transition shadow-sm text-[0.95rem] font-sans placeholder:text-[#a1a1aa] dark:placeholder:text-[#52525b]" placeholder="Escreva sua reflexão aqui..."></textarea>
+              <ReflectionInput question="A sua realidade representa algo diferente desses três?" id="p1_txt_q_14" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 text-rose-700 dark:text-rose-400 font-bold">• E qual seria sua realidade?</p>
-              <textarea className="w-full h-24 border border-rose-200 dark:border-zinc-700 mt-2 p-3 rounded-lg bg-white/80 dark:bg-zinc-900/80 text-gray-800 dark:text-gray-200 resize-none focus:outline-none focus:ring-2 focus:ring-rose-500/50 transition shadow-sm text-[0.95rem] font-sans placeholder:text-[#a1a1aa] dark:placeholder:text-[#52525b]" placeholder="Escreva sua reflexão aqui..."></textarea>
+              <ReflectionInput question="E qual seria sua realidade?" id="p1_txt_q_15" placeholder="Escreva sua reflexão aqui..." />
             </div>
           </div>
         </HighlightBox>
@@ -313,15 +314,15 @@ export const bookData: Chapter[] = [
           <ul className="list-none space-y-6 font-medium">
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Do que acha que deve se arrepender?</span>
-              <div className="w-full h-16 border-b border-gray-300 dark:border-zinc-700 mt-2 rounded bg-white/50 dark:bg-zinc-900/50"></div>
+              <ReflectionInput question="Do que acha que deve se arrepender?" id="p1_div_q_7" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• O que sente que deve pedir a Deus agora?</span>
-              <div className="w-full h-16 border-b border-gray-300 dark:border-zinc-700 mt-2 rounded bg-white/50 dark:bg-zinc-900/50"></div>
+              <ReflectionInput question="O que sente que deve pedir a Deus agora?" id="p1_div_q_8" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Como acredita que Cristo e sua obra te ajuda nisso?</span>
-              <div className="w-full h-16 border-b border-gray-300 dark:border-zinc-700 mt-2 rounded bg-white/50 dark:bg-zinc-900/50"></div>
+              <ReflectionInput question="Como acredita que Cristo e sua obra te ajuda nisso?" id="p1_div_q_9" placeholder="Escreva sua reflexão aqui..." />
             </li>
           </ul>
         </ActionBox>
@@ -345,7 +346,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2">Como isso alinha todo o meu ser em relação a adoração?</p>
-          <textarea className="w-full h-24 border border-rose-200 dark:border-zinc-700 mt-2 p-3 rounded-lg bg-white/80 dark:bg-zinc-900/80 text-gray-800 dark:text-gray-200 resize-none focus:outline-none focus:ring-2 focus:ring-rose-500/50 transition shadow-sm text-[0.95rem] font-sans placeholder:text-[#a1a1aa] dark:placeholder:text-[#52525b]" placeholder="Escreva sua reflexão aqui..."></textarea>
+          <ReflectionInput question="Como isso alinha todo o meu ser em relação a adoração?" id="p1_txt_q_16" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <h3 className="text-xl font-bold mb-4 mt-10 text-rose-700 dark:text-rose-400 uppercase">O FRUTO DO SEU ENCANTAMENTO COM DEUS É QUE É ADORAÇÃO.</h3>
@@ -360,7 +361,7 @@ export const bookData: Chapter[] = [
 
         <p className="mb-4 font-bold text-center text-rose-700 dark:text-rose-400">Adoração É Tudo Aquilo Que Você Faz Por Causa Da Sua Alegria No Valor De Deus.</p>
 
-        <ul className="list-decimal pl-5 space-y-3 mb-8" start={4}>
+        <ul className="list-decimal pl-5 space-y-3 mb-8">
           <li>Emoção que não vem de Deus não é pecado. Mas também não é adoração. Isso significa que você pode cantar, dançar e celebrar com emoção no louvor, sem que estas emoções fluam de Deus. Você pode se emocionar com uma mensagem ou uma peça teatral, e estas emoções não serem santas, pois no momento, não são emoções que fluem de Deus e sim de algum outro objeto. Ou seja, sua “adoração” não flui da verdade.</li>
         </ul>
 
@@ -368,15 +369,15 @@ export const bookData: Chapter[] = [
           <div className="space-y-6">
             <div>
               <p className="mb-2 font-medium">• Como essa compreensão pode afetar positivamente os louvores na congregação?</p>
-              <textarea className="w-full h-24 border border-rose-200 dark:border-zinc-700 mt-2 p-3 rounded-lg bg-white/80 dark:bg-zinc-900/80 text-gray-800 dark:text-gray-200 resize-none focus:outline-none focus:ring-2 focus:ring-rose-500/50 transition shadow-sm text-[0.95rem] font-sans placeholder:text-[#a1a1aa] dark:placeholder:text-[#52525b]" placeholder="Escreva sua reflexão aqui..."></textarea>
+              <ReflectionInput question="Como essa compreensão pode afetar positivamente os louvores na congregação?" id="p1_txt_q_17" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Como essa compreensão pode afetar positivamente a escolha das letras das canções?</p>
-              <textarea className="w-full h-24 border border-rose-200 dark:border-zinc-700 mt-2 p-3 rounded-lg bg-white/80 dark:bg-zinc-900/80 text-gray-800 dark:text-gray-200 resize-none focus:outline-none focus:ring-2 focus:ring-rose-500/50 transition shadow-sm text-[0.95rem] font-sans placeholder:text-[#a1a1aa] dark:placeholder:text-[#52525b]" placeholder="Escreva sua reflexão aqui..."></textarea>
+              <ReflectionInput question="Como essa compreensão pode afetar positivamente a escolha das letras das canções?" id="p1_txt_q_18" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Como essa compreensão pode afetar positivamente a programação da liturgia?</p>
-              <textarea className="w-full h-24 border border-rose-200 dark:border-zinc-700 mt-2 p-3 rounded-lg bg-white/80 dark:bg-zinc-900/80 text-gray-800 dark:text-gray-200 resize-none focus:outline-none focus:ring-2 focus:ring-rose-500/50 transition shadow-sm text-[0.95rem] font-sans placeholder:text-[#a1a1aa] dark:placeholder:text-[#52525b]" placeholder="Escreva sua reflexão aqui..."></textarea>
+              <ReflectionInput question="Como essa compreensão pode afetar positivamente a programação da liturgia?" id="p1_txt_q_19" placeholder="Escreva sua reflexão aqui..." />
             </div>
           </div>
         </HighlightBox>
@@ -391,13 +392,13 @@ export const bookData: Chapter[] = [
 
         <VerseQuote text="Irmãos, o desejo do meu coração e a minha oração a Deus pelos israelitas é que eles sejam salvos. Pois posso testemunhar que eles têm zelo por Deus, mas o seu zelo não se baseia no conhecimento. Porquanto, ignorando a justiça que vem de Deus e procurando estabelecer a sua própria, não se submeteram à justiça de Deus." refText="(Rm.10.1-3)" />
 
-        <ul className="list-decimal pl-5 space-y-3 mb-8" start={5}>
+        <ul className="list-decimal pl-5 space-y-3 mb-8">
           <li>Paulo nesta passagem, afirma com segurança que a devoção dos seus compatriotas em relação a Deus era da mais sincera que conhecia. Porém, a falta de entendimento do evangelho invalidava completamente a sinceridade daquela devoção. Segundo Paulo, eles estavam “sinceramente” perdidos.</li>
         </ul>
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2">Como esta verdade toca em você?</p>
-          <textarea className="w-full h-24 border border-rose-200 dark:border-zinc-700 mt-2 p-3 rounded-lg bg-white/80 dark:bg-zinc-900/80 text-gray-800 dark:text-gray-200 resize-none focus:outline-none focus:ring-2 focus:ring-rose-500/50 transition shadow-sm text-[0.95rem] font-sans placeholder:text-[#a1a1aa] dark:placeholder:text-[#52525b]" placeholder="Escreva sua reflexão aqui..."></textarea>
+          <ReflectionInput question="Como esta verdade toca em você?" id="p1_txt_q_20" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <h3 className="text-xl font-bold mb-4 mt-10 text-rose-700 dark:text-rose-400 uppercase">INTENSIDADE SEM VERDADE NÃO É ADORAÇÃO VERDADEIRA.</h3>

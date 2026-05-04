@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, ChevronRight, LogOut, User as UserIcon } from 'lucide-react';
+import { ArrowLeft, ChevronRight, LogOut, User as UserIcon, BookOpen } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { bookData } from '../data/bookData';
 import { useAuth } from '../contexts/AuthContext';
@@ -33,6 +33,15 @@ export function TOC() {
                 Gerenciar Acessos
               </button>
             )}
+
+            <button 
+              onClick={() => navigate('/my-reflections')}
+              className="ml-4 flex items-center text-[0.7rem] bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full font-bold hover:bg-emerald-200 transition"
+            >
+              <BookOpen size={12} className="mr-1" />
+              <span className="hidden sm:inline">Minhas Reflexões</span>
+              <span className="sm:hidden">Reflexões</span>
+            </button>
           </div>
           
           <div className="flex items-center gap-4">
