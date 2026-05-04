@@ -1,0 +1,49 @@
+{
+  "entities": {
+    "profile": {
+      "title": "Profile",
+      "description": "User profile containing approval status and name.",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "User email address"
+        },
+        "full_name": {
+          "type": "string",
+          "description": "User full name"
+        },
+        "is_approved": {
+          "type": "boolean",
+          "description": "Whether the user is approved to read chapters"
+        }
+      },
+      "required": ["email", "is_approved"]
+    },
+    "admin": {
+      "title": "Admin",
+      "description": "Administrative user.",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        }
+      },
+      "required": ["email"]
+    }
+  },
+  "firestore": {
+    "/profiles/{userId}": {
+      "schema": {
+        "$ref": "#/entities/profile"
+      },
+      "description": "Profiles of the users"
+    },
+    "/admins/{userId}": {
+      "schema": {
+        "$ref": "#/entities/admin"
+      },
+      "description": "Admin privileges marker"
+    }
+  }
+}

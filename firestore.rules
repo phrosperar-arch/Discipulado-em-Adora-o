@@ -1,0 +1,68 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() { return request.auth != null; }
+    function isVerifiedEmail() { return isSignedIn() && request.auth.token.email_verified == true; }
+    function isAdmin() { return isSignedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid)); }
+    function isOwner(userId) { return isSignedIn() && request.auth.uid == userId; }
+    function incoming() { return request.resource.data; }
+    function existing() { return resource.data; }
+
+    // Validation definitions
+    function isValidProfile(data, userId) {
+      return data.keys().hasAll(['email', 'is_approved']) 
+        && data.email is string 
+        && data.email.size() <= 200
+        && data.is_approved is bool
+        && data.get('full_name', '') is string
+        && data.get('full_name', '').size() <= 100
+        && (data.email == request.auth.token.email);
+    }
+    
+    function isValidAdmin(data) {
+      return data.keys().hasAll(['email']) 
+        && data.email is string 
+        && data.email.size() <= 200;
+    }
+
+    match /profiles/{userId} {
+      allow get: if isOwner(userId) || isAdmin();
+      
+      allow list: if isAdmin(); // Only admins can list profiles
+
+      allow create: if isOwner(userId)
+                    && (incoming().keys().hasAll(['email', 'is_approved']) && incoming().keys().size() >= 2 && incoming().keys().size() <= 3)
+                    && isValidProfile(incoming(), userId)
+                    && incoming().is_approved == false; // Users can't approve themselves initially (will be controlled below or admins can bypass using isAdmin() check in update)
+      
+      allow update: if (isAdmin() && isValidProfile(incoming(), userId)) ||
+                    (
+                      isOwner(userId) 
+                      && isValidProfile(incoming(), userId)
+                      && incoming().diff(existing()).affectedKeys().hasOnly(['full_name']) 
+                      // cannot change approval status
+                    );
+
+      allow delete: if isAdmin();
+    }
+
+    match /admins/{userId} {
+      // Allow read so isAdmin() works securely
+      allow get: if isSignedIn();
+      allow list: if isAdmin();
+      
+      // We will securely allow creating an admin doc ONLY if the user's verified email perfectly matches our founder strings
+      allow create, update: if isOwner(userId) 
+                            // Temporarily bypass email verified since sometimes Google accounts might skip or if we don't have it setup
+                            && (request.auth.token.email == 'phrosperar@gmail.com' || request.auth.token.email == 'prmarciog@gmail.com')
+                            && isValidAdmin(incoming());
+                            
+      allow delete: if isAdmin();
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { supabase } from '../lib/supabase';
+import { db, handleFirestoreError, OperationType } from '../lib/firebase';
+import { collection, getDocs, updateDoc, deleteDoc, doc, query, orderBy } from 'firebase/firestore';
 import { ShieldCheck, ArrowLeft, Check, X, Trash2, Edit2, Save, User as UserIcon } from 'lucide-react';
 import { Link, Navigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -21,17 +22,41 @@ export function AdminArea() {
   const [actionError, setActionError] = useState<string | null>(null);
 
   const fetchProfiles = async () => {
-    // Ordena primeiro por status de aprovação (false/pendente no topo) e depois por email
-    const { data, error } = await supabase
-      .from('profiles')
-      .select('*')
-      .order('is_approved', { ascending: true })
-      .order('email');
+    try {
+      // Ordena primeiro por status de aprovação (false/pendente no topo) e depois por email
+      const profilesRef = collection(db, 'profiles');
+      const q = query(profilesRef, orderBy('is_approved', 'asc'), orderBy('email'));
       
-    if (data) {
+      const snapshot = await getDocs(q);
+      const data: Profile[] = snapshot.docs.map(docSnap => ({
+        id: docSnap.id,
+        ...docSnap.data()
+      })) as Profile[];
+      
       setProfiles(data);
+    } catch (error) {
+      console.error("Fetch profiles error: ", error);
+      // fallback without composite index if it fails
+      try {
+        const fallbackSnapshot = await getDocs(collection(db, 'profiles'));
+        const fallbackData = fallbackSnapshot.docs.map(docSnap => ({
+          id: docSnap.id,
+          ...docSnap.data()
+        })) as Profile[];
+        // Emulate local ordering
+        fallbackData.sort((a, b) => {
+           if (a.is_approved === b.is_approved) {
+              return a.email.localeCompare(b.email);
+           }
+           return a.is_approved ? 1 : -1;
+        });
+        setProfiles(fallbackData);
+      } catch (err) {
+        handleFirestoreError(err, OperationType.LIST, 'profiles');
+      }
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   useEffect(() => {
@@ -41,15 +66,13 @@ export function AdminArea() {
 
   const toggleApproval = async (id: string, currentStatus: boolean) => {
     setActionError(null);
-    const { error } = await supabase
-      .from('profiles')
-      .update({ is_approved: !currentStatus })
-      .eq('id', id);
-
-    if (!error) {
+    try {
+      const profileRef = doc(db, 'profiles', id);
+      await updateDoc(profileRef, { is_approved: !currentStatus });
       setProfiles(prev => prev.map(p => p.id === id ? { ...p, is_approved: !currentStatus } : p));
-    } else {
+    } catch (error) {
       setActionError("Erro ao atualizar status de liberação.");
+      handleFirestoreError(error, OperationType.UPDATE, `profiles/${id}`);
     }
   };
 
@@ -60,30 +83,26 @@ export function AdminArea() {
 
   const saveEdit = async (id: string) => {
     setActionError(null);
-    const { error } = await supabase
-      .from('profiles')
-      .update({ full_name: editName })
-      .eq('id', id);
-
-    if (!error) {
+    try {
+      const profileRef = doc(db, 'profiles', id);
+      await updateDoc(profileRef, { full_name: editName });
       setProfiles(prev => prev.map(p => p.id === id ? { ...p, full_name: editName } : p));
       setEditingId(null);
-    } else {
+    } catch (error) {
       setActionError("Erro ao salvar o nome.");
+      handleFirestoreError(error, OperationType.UPDATE, `profiles/${id}`);
     }
   };
 
   const confirmDelete = async (id: string) => {
     setActionError(null);
-    const { error } = await supabase
-      .from('profiles')
-      .delete()
-      .eq('id', id);
-
-    if (!error) {
+    try {
+      const profileRef = doc(db, 'profiles', id);
+      await deleteDoc(profileRef);
       setProfiles(prev => prev.filter(p => p.id !== id));
-    } else {
+    } catch (error) {
       setActionError("Erro ao excluir. Podem haver registros vinculados.");
+      handleFirestoreError(error, OperationType.DELETE, `profiles/${id}`);
     }
     setDeletingId(null);
   };

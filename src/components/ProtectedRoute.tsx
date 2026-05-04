@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { Lock, QrCode, CheckCircle2, RotateCcw, LogOut } from 'lucide-react';
-import { supabase } from '../lib/supabase';
 
 export function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, isAuthenticated, isLoaded, isApproved, isAdmin, logout, refreshAccess, debugError } = useAuth();

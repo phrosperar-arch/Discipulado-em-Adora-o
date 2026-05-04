@@ -20,7 +20,7 @@ export default defineConfig(({mode}) => {
           background_color: '#fefcfb',
           icons: [
             {
-              src: 'boy.png',
+              src: 'logo-adoracao.png',
               sizes: '192x192 384x384 512x512',
               type: 'image/png',
               purpose: 'any maskable'
