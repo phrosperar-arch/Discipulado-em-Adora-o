@@ -62,11 +62,11 @@ export const bookData: Chapter[] = [
           <div className="space-y-6">
             <div>
               <p className="mb-2 font-medium">• O que isso muda na forma de ver e viver a adoração?</p>
-              <ReflectionInput question="O que isso muda na forma de ver e viver a adoração?" id="p2_txt_q_9" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="5. Adoração: Resposta ao Amor de Deus" question="O que isso muda na forma de ver e viver a adoração?" id="p2_txt_q_9" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Qual deve ser nossa atitude?</p>
-              <ReflectionInput question="Qual deve ser nossa atitude?" id="p2_txt_q_10" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="5. Adoração: Resposta ao Amor de Deus" question="Qual deve ser nossa atitude?" id="p2_txt_q_10" placeholder="Escreva sua reflexão aqui..." />
             </div>
           </div>
         </HighlightBox>
@@ -78,11 +78,11 @@ export const bookData: Chapter[] = [
           <div className="space-y-6">
             <div>
               <p className="mb-2 font-medium">• O que isso muda no culto?</p>
-              <ReflectionInput question="O que isso muda no culto?" id="p2_txt_q_11" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="5. Adoração: Resposta ao Amor de Deus" question="O que isso muda no culto?" id="p2_txt_q_11" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• O que isso muda no louvor que cantamos?</p>
-              <ReflectionInput question="O que isso muda no louvor que cantamos?" id="p2_txt_q_12" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="5. Adoração: Resposta ao Amor de Deus" question="O que isso muda no louvor que cantamos?" id="p2_txt_q_12" placeholder="Escreva sua reflexão aqui..." />
             </div>
           </div>
         </HighlightBox>
@@ -95,7 +95,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2 font-medium">O que Deus espera de nós então?</p>
-          <ReflectionInput question="O que Deus espera de nós então?" id="p2_txt_q_13" placeholder="Escreva sua reflexão aqui..." />
+          <ReflectionInput chapterTitle="5. Adoração: Resposta ao Amor de Deus" question="O que Deus espera de nós então?" id="p2_txt_q_13" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <ul className="list-decimal pl-5 space-y-4 mb-6 mt-8">
@@ -105,14 +105,14 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2 font-medium">O que isso muda ao ministrar o louvor na congregação?</p>
-          <ReflectionInput question="O que isso muda ao ministrar o louvor na congregação?" id="p2_txt_q_14" placeholder="Escreva sua reflexão aqui..." />
+          <ReflectionInput chapterTitle="5. Adoração: Resposta ao Amor de Deus" question="O que isso muda ao ministrar o louvor na congregação?" id="p2_txt_q_14" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <h3 className="text-xl font-bold mb-4 mt-10 text-rose-700 dark:text-rose-400 uppercase">ADORAR PARA TENTAR IMPRESSIONAR A DEUS É ERRADO.</h3>
         
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2 font-medium">Em geral, qual é a intenção objetiva e imediata de um ministro de louvor e do ministério?</p>
-          <ReflectionInput question="Em geral, qual é a intenção objetiva e imediata de um ministro de louvor e do ministério?" id="p2_txt_q_15" placeholder="Escreva sua reflexão aqui..." />
+          <ReflectionInput chapterTitle="5. Adoração: Resposta ao Amor de Deus" question="Em geral, qual é a intenção objetiva e imediata de um ministro de louvor e do ministério?" id="p2_txt_q_15" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <ul className="list-decimal pl-5 space-y-4 mb-6 mt-8">
@@ -128,15 +128,15 @@ export const bookData: Chapter[] = [
           <ul className="list-none space-y-6 font-medium">
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Do que acha que deve se arrepender?</span>
-              <ReflectionInput question="Do que acha que deve se arrepender?" id="p2_div_q_1" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="5. Adoração: Resposta ao Amor de Deus" question="Do que acha que deve se arrepender?" id="p2_div_q_1" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• O que sente que deve pedir a Deus agora?</span>
-              <ReflectionInput question="O que sente que deve pedir a Deus agora?" id="p2_div_q_2" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="5. Adoração: Resposta ao Amor de Deus" question="O que sente que deve pedir a Deus agora?" id="p2_div_q_2" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Como acredita que Cristo e sua obra te ajuda nisso?</span>
-              <ReflectionInput question="Como acredita que Cristo e sua obra te ajuda nisso?" id="p2_div_q_3" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="5. Adoração: Resposta ao Amor de Deus" question="Como acredita que Cristo e sua obra te ajuda nisso?" id="p2_div_q_3" placeholder="Escreva sua reflexão aqui..." />
             </li>
           </ul>
         </ActionBox>
@@ -165,11 +165,11 @@ export const bookData: Chapter[] = [
           <div className="space-y-6">
             <div>
               <p className="mb-2 font-medium">• Você ama cada vez mais alguém se concentrando em você ou na pessoa amada?</p>
-              <ReflectionInput question="Você ama cada vez mais alguém se concentrando em você ou na pessoa amada?" id="p2_txt_q_16" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="6. O Caminho da Adoração" question="Você ama cada vez mais alguém se concentrando em você ou na pessoa amada?" id="p2_txt_q_16" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Você deve se concentrar nas coisas que você faz pra Deus que revelam suas qualidades? Ou nas coisas que Deus fez que revelam as qualidades dele?</p>
-              <ReflectionInput question="Você deve se concentrar nas coisas que você faz pra Deus que revelam suas qualidades? Ou nas coisas que Deus fez que revelam as qualidades dele?" id="p2_txt_q_17" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="6. O Caminho da Adoração" question="Você deve se concentrar nas coisas que você faz pra Deus que revelam suas qualidades? Ou nas coisas que Deus fez que revelam as qualidades dele?" id="p2_txt_q_17" placeholder="Escreva sua reflexão aqui..." />
             </div>
           </div>
         </HighlightBox>
@@ -180,7 +180,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2 font-medium">Mas como você vai pensar em alguém da qual sabe tão pouco? Como vai pensar tanto em alguém que ainda lhe é tão estranho?</p>
-          <ReflectionInput question="Mas como você vai pensar em alguém da qual sabe tão pouco? Como vai pensar tanto em alguém que ainda lhe é tão estranho?" id="p2_txt_q_18" placeholder="Escreva sua reflexão aqui..." />
+          <ReflectionInput chapterTitle="6. O Caminho da Adoração" question="Mas como você vai pensar em alguém da qual sabe tão pouco? Como vai pensar tanto em alguém que ainda lhe é tão estranho?" id="p2_txt_q_18" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <h3 className="text-xl font-bold mb-4 mt-10 text-rose-700 dark:text-rose-400 uppercase">VOCÊ PRECISA SE APROFUNDAR NO EVANGELHO!</h3>
@@ -193,15 +193,15 @@ export const bookData: Chapter[] = [
           <div className="space-y-6">
             <div>
               <p className="mb-2 font-bold text-rose-700 dark:text-rose-400">1. Pelo que Paulo agradece a respeito desses irmãos?</p>
-              <ReflectionInput question="Pelo que Paulo agradece a respeito desses irmãos?" id="p2_txt_q_19" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="6. O Caminho da Adoração" question="Pelo que Paulo agradece a respeito desses irmãos?" id="p2_txt_q_19" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-bold text-rose-700 dark:text-rose-400">2. O que causava a frutificação e crescimento na fé em Cristo, amor entre esses irmãos?</p>
-              <ReflectionInput question="O que causava a frutificação e crescimento na fé em Cristo, amor entre esses irmãos?" id="p2_txt_q_20" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="6. O Caminho da Adoração" question="O que causava a frutificação e crescimento na fé em Cristo, amor entre esses irmãos?" id="p2_txt_q_20" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-bold text-rose-700 dark:text-rose-400">3. O que foi que eles ouviram e entenderam?</p>
-              <ReflectionInput question="O que foi que eles ouviram e entenderam?" id="p2_txt_q_21" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="6. O Caminho da Adoração" question="O que foi que eles ouviram e entenderam?" id="p2_txt_q_21" placeholder="Escreva sua reflexão aqui..." />
             </div>
           </div>
         </HighlightBox>
@@ -219,15 +219,15 @@ export const bookData: Chapter[] = [
           <div className="space-y-6 pt-4">
             <div>
               <p className="mb-2 font-medium">• Você pode fazer forças para achar algo belo?</p>
-              <ReflectionInput question="Você pode fazer forças para achar algo belo?" id="p2_txt_q_22" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="6. O Caminho da Adoração" question="Você pode fazer forças para achar algo belo?" id="p2_txt_q_22" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Se você não enxerga o que é belo, terá algum encantamento?</p>
-              <ReflectionInput question="Se você não enxerga o que é belo, terá algum encantamento?" id="p2_txt_q_23" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="6. O Caminho da Adoração" question="Se você não enxerga o que é belo, terá algum encantamento?" id="p2_txt_q_23" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• É possível achar algo belo e se encantar com ele sem atentar para ele?</p>
-              <ReflectionInput question="É possível achar algo belo e se encantar com ele sem atentar para ele?" id="p2_txt_q_24" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="6. O Caminho da Adoração" question="É possível achar algo belo e se encantar com ele sem atentar para ele?" id="p2_txt_q_24" placeholder="Escreva sua reflexão aqui..." />
             </div>
           </div>
         </HighlightBox>
@@ -258,11 +258,11 @@ export const bookData: Chapter[] = [
           <ul className="list-none space-y-6 font-medium">
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Do que acha que deve se arrepender?</span>
-              <ReflectionInput question="Do que acha que deve se arrepender?" id="p2_div_q_4" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="6. O Caminho da Adoração" question="Do que acha que deve se arrepender?" id="p2_div_q_4" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• O que sente que deve pedir a Deus agora?</span>
-              <ReflectionInput question="O que sente que deve pedir a Deus agora?" id="p2_div_q_5" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="6. O Caminho da Adoração" question="O que sente que deve pedir a Deus agora?" id="p2_div_q_5" placeholder="Escreva sua reflexão aqui..." />
             </li>
           </ul>
         </ActionBox>
@@ -297,11 +297,11 @@ export const bookData: Chapter[] = [
           <div className="space-y-6">
             <div>
               <p className="mb-2 font-medium">• Baseado no que vemos aqui, como podemos exemplificar uma forma de adultério na adoração?</p>
-              <ReflectionInput question="Baseado no que vemos aqui, como podemos exemplificar uma forma de adultério na adoração?" id="p2_txt_q_25" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="7. A Adoração e a Oração" question="Baseado no que vemos aqui, como podemos exemplificar uma forma de adultério na adoração?" id="p2_txt_q_25" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Você já se pegou ou se encontra nesta situação?</p>
-              <ReflectionInput question="Você já se pegou ou se encontra nesta situação?" id="p2_txt_q_26" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="7. A Adoração e a Oração" question="Você já se pegou ou se encontra nesta situação?" id="p2_txt_q_26" placeholder="Escreva sua reflexão aqui..." />
             </div>
           </div>
         </HighlightBox>
@@ -320,15 +320,15 @@ export const bookData: Chapter[] = [
           <div className="space-y-6">
             <div>
               <p className="mb-2 font-medium">• Você se identifica com esta realidade?</p>
-              <ReflectionInput question="Você se identifica com esta realidade?" id="p2_txt_q_27" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="7. A Adoração e a Oração" question="Você se identifica com esta realidade?" id="p2_txt_q_27" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Percebeu isso agora ou já havia percebido?</p>
-              <ReflectionInput question="Percebeu isso agora ou já havia percebido?" id="p2_txt_q_28" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="7. A Adoração e a Oração" question="Percebeu isso agora ou já havia percebido?" id="p2_txt_q_28" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Se já percebeu a algum tempo, mudou depois que se enxergou? Se não, sabe por que não?</p>
-              <ReflectionInput question="Se já percebeu a algum tempo, mudou depois que se enxergou? Se não, sabe por que não?" id="p2_txt_q_29" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="7. A Adoração e a Oração" question="Se já percebeu a algum tempo, mudou depois que se enxergou? Se não, sabe por que não?" id="p2_txt_q_29" placeholder="Escreva sua reflexão aqui..." />
             </div>
           </div>
         </HighlightBox>
@@ -352,11 +352,11 @@ export const bookData: Chapter[] = [
           <div className="space-y-6">
             <div>
               <p className="mb-2 font-medium">• Como você sente ao saber disso?</p>
-              <ReflectionInput question="Como você sente ao saber disso?" id="p2_txt_q_30" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="7. A Adoração e a Oração" question="Como você sente ao saber disso?" id="p2_txt_q_30" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• O que sente vontade de fazer?</p>
-              <ReflectionInput question="O que sente vontade de fazer?" id="p2_txt_q_31" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="7. A Adoração e a Oração" question="O que sente vontade de fazer?" id="p2_txt_q_31" placeholder="Escreva sua reflexão aqui..." />
             </div>
           </div>
         </HighlightBox>
@@ -376,15 +376,15 @@ export const bookData: Chapter[] = [
           <ul className="list-none space-y-6 font-medium">
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Do que acha que deve se arrepender?</span>
-              <ReflectionInput question="Do que acha que deve se arrepender?" id="p2_div_q_6" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="7. A Adoração e a Oração" question="Do que acha que deve se arrepender?" id="p2_div_q_6" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• O que sente que deve pedir a Deus agora?</span>
-              <ReflectionInput question="O que sente que deve pedir a Deus agora?" id="p2_div_q_7" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="7. A Adoração e a Oração" question="O que sente que deve pedir a Deus agora?" id="p2_div_q_7" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Como acredita que Cristo e sua obra te ajuda nisso?</span>
-              <ReflectionInput question="Como acredita que Cristo e sua obra te ajuda nisso?" id="p2_div_q_8" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="7. A Adoração e a Oração" question="Como acredita que Cristo e sua obra te ajuda nisso?" id="p2_div_q_8" placeholder="Escreva sua reflexão aqui..." />
             </li>
           </ul>
         </ActionBox>
@@ -397,7 +397,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2 font-medium">O que Deus está falando com você aqui?</p>
-          <ReflectionInput question="O que Deus está falando com você aqui?" id="p2_txt_q_32" placeholder="Escreva sua reflexão aqui..." />
+          <ReflectionInput chapterTitle="7. A Adoração e a Oração" question="O que Deus está falando com você aqui?" id="p2_txt_q_32" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <h3 className="text-xl font-bold mb-4 mt-10 text-rose-700 dark:text-rose-400 uppercase">RESUMINDO...</h3>
@@ -453,27 +453,27 @@ export const bookData: Chapter[] = [
           <div className="space-y-6">
             <div>
               <p className="mb-2 font-medium">• O primeiro sentimento que aparece no seu coração quando você pensa em Deus é filiação ou serviço?</p>
-              <ReflectionInput question="O primeiro sentimento que aparece no seu coração quando você pensa em Deus é filiação ou serviço?" id="p2_txt_q_33" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="8. Vivendo Como Filhos de Deus" question="O primeiro sentimento que aparece no seu coração quando você pensa em Deus é filiação ou serviço?" id="p2_txt_q_33" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Você se sente afastado de Deus como Pai, embora ainda o olhe como Deus?</p>
-              <ReflectionInput question="Você se sente afastado de Deus como Pai, embora ainda o olhe como Deus?" id="p2_txt_q_34" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="8. Vivendo Como Filhos de Deus" question="Você se sente afastado de Deus como Pai, embora ainda o olhe como Deus?" id="p2_txt_q_34" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Você sente saudades de Deus?</p>
-              <ReflectionInput question="Você sente saudades de Deus?" id="p2_txt_q_35" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="8. Vivendo Como Filhos de Deus" question="Você sente saudades de Deus?" id="p2_txt_q_35" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Você acha que ele sente a sua falta?</p>
-              <ReflectionInput question="Você acha que ele sente a sua falta?" id="p2_txt_q_36" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="8. Vivendo Como Filhos de Deus" question="Você acha que ele sente a sua falta?" id="p2_txt_q_36" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• E como posso ter certeza de que sou filho de Deus?</p>
-              <ReflectionInput question="E como posso ter certeza de que sou filho de Deus?" id="p2_txt_q_37" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="8. Vivendo Como Filhos de Deus" question="E como posso ter certeza de que sou filho de Deus?" id="p2_txt_q_37" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Como me certificar que o amor de Deus por mim, é um amor de Pai?</p>
-              <ReflectionInput question="Como me certificar que o amor de Deus por mim, é um amor de Pai?" id="p2_txt_q_38" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="8. Vivendo Como Filhos de Deus" question="Como me certificar que o amor de Deus por mim, é um amor de Pai?" id="p2_txt_q_38" placeholder="Escreva sua reflexão aqui..." />
             </div>
           </div>
         </HighlightBox>
@@ -491,7 +491,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2 font-medium">Você pode dizer de você mesmo que já teve esta experiência?</p>
-          <ReflectionInput question="Você pode dizer de você mesmo que já teve esta experiência?" id="p2_txt_q_39" placeholder="Escreva sua reflexão aqui..." />
+          <ReflectionInput chapterTitle="8. Vivendo Como Filhos de Deus" question="Você pode dizer de você mesmo que já teve esta experiência?" id="p2_txt_q_39" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <ul className="list-decimal pl-5 space-y-4 mb-6 mt-8">
@@ -503,7 +503,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2 font-medium">Quais são os principais benefícios que você obteve na sua relação com o Espírito Santo?</p>
-          <ReflectionInput question="Quais são os principais benefícios que você obteve na sua relação com o Espírito Santo?" id="p2_txt_q_40" placeholder="Escreva sua reflexão aqui..." />
+          <ReflectionInput chapterTitle="8. Vivendo Como Filhos de Deus" question="Quais são os principais benefícios que você obteve na sua relação com o Espírito Santo?" id="p2_txt_q_40" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <h3 className="text-xl font-bold mb-4 mt-10 text-rose-700 dark:text-rose-400 uppercase">O QUE SUA ALMA SABE QUE DEUS SENTE POR VOCÊ, É O QUE VOCÊ SENTE POR DEUS.</h3>
@@ -551,27 +551,27 @@ export const bookData: Chapter[] = [
         <div className="space-y-6 mb-12">
           <div>
             <p className="mb-2 font-bold text-rose-700 dark:text-rose-400">• Em relação a minha forma de pensar mudou...</p>
-            <ReflectionInput question="Em relação a minha forma de pensar mudou..." id="p2_txt_q_41" placeholder="Escreva sua reflexão aqui..." />
+            <ReflectionInput chapterTitle="Conclusão Final" question="Em relação a minha forma de pensar mudou..." id="p2_txt_q_41" placeholder="Escreva sua reflexão aqui..." />
           </div>
           <div>
             <p className="mb-2 font-bold text-rose-700 dark:text-rose-400">• Em relação aos meus sentimentos mudou...</p>
-            <ReflectionInput question="Em relação aos meus sentimentos mudou..." id="p2_txt_q_42" placeholder="Escreva sua reflexão aqui..." />
+            <ReflectionInput chapterTitle="Conclusão Final" question="Em relação aos meus sentimentos mudou..." id="p2_txt_q_42" placeholder="Escreva sua reflexão aqui..." />
           </div>
           <div>
             <p className="mb-2 font-bold text-rose-700 dark:text-rose-400">• Em relação as minhas atitudes, mudou...</p>
-            <ReflectionInput question="Em relação as minhas atitudes, mudou..." id="p2_txt_q_43" placeholder="Escreva sua reflexão aqui..." />
+            <ReflectionInput chapterTitle="Conclusão Final" question="Em relação as minhas atitudes, mudou..." id="p2_txt_q_43" placeholder="Escreva sua reflexão aqui..." />
           </div>
           <div>
             <p className="mb-2 font-bold text-rose-700 dark:text-rose-400">• Em relação aos meus valores, mudou...</p>
-            <ReflectionInput question="Em relação aos meus valores, mudou..." id="p2_txt_q_44" placeholder="Escreva sua reflexão aqui..." />
+            <ReflectionInput chapterTitle="Conclusão Final" question="Em relação aos meus valores, mudou..." id="p2_txt_q_44" placeholder="Escreva sua reflexão aqui..." />
           </div>
           <div>
             <p className="mb-2 font-bold text-rose-700 dark:text-rose-400">• Para continuar crescendo no discipulado em adoração eu vou...</p>
-            <ReflectionInput question="Para continuar crescendo no discipulado em adoração eu vou..." id="p2_txt_q_45" placeholder="Escreva sua reflexão aqui..." />
+            <ReflectionInput chapterTitle="Conclusão Final" question="Para continuar crescendo no discipulado em adoração eu vou..." id="p2_txt_q_45" placeholder="Escreva sua reflexão aqui..." />
           </div>
           <div>
             <p className="mb-2 font-bold text-rose-700 dark:text-rose-400">• Para me ajudar nesta novo andar vou procurar...</p>
-            <ReflectionInput question="Para me ajudar nesta novo andar vou procurar..." id="p2_txt_q_46" placeholder="Escreva sua reflexão aqui..." />
+            <ReflectionInput chapterTitle="Conclusão Final" question="Para me ajudar nesta novo andar vou procurar..." id="p2_txt_q_46" placeholder="Escreva sua reflexão aqui..." />
           </div>
         </div>
 

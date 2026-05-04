@@ -4,12 +4,14 @@ import { db, auth } from '../lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, BookOpen, Clock, Loader2 } from 'lucide-react';
+import { reflectionsMap } from '../data/reflectionsMap';
 
 interface SavedReflection {
   id: string;
   content: string;
   updatedAt?: string;
   question?: string;
+  chapterTitle?: string;
 }
 
 export function MyReflections() {
@@ -39,7 +41,14 @@ export function MyReflections() {
       const fetched: SavedReflection[] = [];
       querySnapshot.forEach((doc) => {
         if(doc.data().content?.trim()) {
-           fetched.push({ id: doc.id, ...doc.data() } as SavedReflection);
+           const data = doc.data();
+           const mapInfo = reflectionsMap[doc.id] || {};
+           fetched.push({ 
+             id: doc.id, 
+             ...data,
+             question: data.question || mapInfo.question,
+             chapterTitle: data.chapterTitle || mapInfo.chapterTitle
+           } as SavedReflection);
         }
       });
       // Sort by updatedAt descending
@@ -133,6 +142,12 @@ export function MyReflections() {
                   <Clock size={14} />
                   <span>Atualizado em: {formatDate(ref.updatedAt) || 'Recente'}</span>
                 </div>
+                {ref.chapterTitle && (
+                  <div className="mb-2 inline-flex items-center text-xs font-medium bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 px-2.5 py-1 rounded-md max-w-max">
+                    <BookOpen size={12} className="mr-1.5" />
+                    {ref.chapterTitle}
+                  </div>
+                )}
                 {ref.question && (
                   <p className="font-semibold text-rose-700 dark:text-rose-400 mb-2 font-sans">
                     {ref.question}

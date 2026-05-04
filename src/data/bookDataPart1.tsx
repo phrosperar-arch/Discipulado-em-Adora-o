@@ -102,15 +102,15 @@ export const bookData: Chapter[] = [
           <ul className="list-none space-y-6 font-medium">
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Do que acha que deve se arrepender?</span>
-              <ReflectionInput question="Do que acha que deve se arrepender?" id="p1_div_q_1" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="1. O Perigo De Oferecer Fogo Estranho Ao Senhor" question="Do que acha que deve se arrepender?" id="p1_div_q_1" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• O que sente que deve pedir a Deus agora?</span>
-              <ReflectionInput question="O que sente que deve pedir a Deus agora?" id="p1_div_q_2" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="1. O Perigo De Oferecer Fogo Estranho Ao Senhor" question="O que sente que deve pedir a Deus agora?" id="p1_div_q_2" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Como acredita que Cristo e sua obra te ajuda nisso?</span>
-              <ReflectionInput question="Como acredita que Cristo e sua obra te ajuda nisso?" id="p1_div_q_3" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="1. O Perigo De Oferecer Fogo Estranho Ao Senhor" question="Como acredita que Cristo e sua obra te ajuda nisso?" id="p1_div_q_3" placeholder="Escreva sua reflexão aqui..." />
             </li>
           </ul>
         </ActionBox>
@@ -199,7 +199,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-4">No fundo do seu coração, você acha que Deus deveria te amar? Te salvar? Te abençoar? Te dar uma vida boa ou melhor?</p>
-          <ReflectionInput question="No fundo do seu coração, você acha que Deus deveria te amar? Te salvar? Te abençoar? Te dar uma vida boa ou melhor?" id="p1_txt_q_10" placeholder="Escreva sua reflexão aqui..." />
+          <ReflectionInput chapterTitle="2. Adoração Debaixo da Graça" question="No fundo do seu coração, você acha que Deus deveria te amar? Te salvar? Te abençoar? Te dar uma vida boa ou melhor?" id="p1_txt_q_10" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <p className="mb-2 mt-6"><strong className="text-rose-700 dark:text-rose-400 uppercase">APLICAÇÃO</strong></p>
@@ -209,15 +209,15 @@ export const bookData: Chapter[] = [
           <ul className="list-none space-y-6 font-medium">
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Do que acha que deve se arrepender?</span>
-              <ReflectionInput question="Do que acha que deve se arrepender?" id="p1_div_q_4" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="2. Adoração Debaixo da Graça" question="Do que acha que deve se arrepender?" id="p1_div_q_4" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• O que sente que deve pedir a Deus agora?</span>
-              <ReflectionInput question="O que sente que deve pedir a Deus agora?" id="p1_div_q_5" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="2. Adoração Debaixo da Graça" question="O que sente que deve pedir a Deus agora?" id="p1_div_q_5" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Como acredita que Cristo e sua obra te ajuda nisso?</span>
-              <ReflectionInput question="Como acredita que Cristo e sua obra te ajuda nisso?" id="p1_div_q_6" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="2. Adoração Debaixo da Graça" question="Como acredita que Cristo e sua obra te ajuda nisso?" id="p1_div_q_6" placeholder="Escreva sua reflexão aqui..." />
             </li>
           </ul>
         </ActionBox>
@@ -251,7 +251,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2">Como você se identifica com isso?</p>
-          <ReflectionInput question="Como você se identifica com isso?" id="p1_txt_q_11" placeholder="Escreva sua reflexão aqui..." />
+          <ReflectionInput chapterTitle="3. Adoração em Espírito" question="Como você se identifica com isso?" id="p1_txt_q_11" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <h3 className="text-xl font-bold mb-4 mt-10 text-rose-700 dark:text-rose-400 uppercase">SEU CORPO PODE FAZER O QUE O SEU CORAÇÃO NÃO DESEJA.</h3>
@@ -269,7 +269,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2">Como você se identifica com isso?</p>
-          <ReflectionInput question="Como você se identifica com isso?" id="p1_txt_q_12" placeholder="Escreva sua reflexão aqui..." />
+          <ReflectionInput chapterTitle="3. Adoração em Espírito" question="Como você se identifica com isso?" id="p1_txt_q_12" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <h3 className="text-xl font-bold mb-4 mt-10 text-rose-700 dark:text-rose-400 uppercase">ADORAÇÃO EM ESPÍRITO É O DESEJO CONQUISTADO PELO DEUS ENCANTADOR.</h3>
@@ -287,7 +287,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2">O que o Senhor está corrigindo aqui?</p>
-          <ReflectionInput question="O que o Senhor está corrigindo aqui?" id="p1_txt_q_13" placeholder="Escreva sua reflexão aqui..." />
+          <ReflectionInput chapterTitle="3. Adoração em Espírito" question="O que o Senhor está corrigindo aqui?" id="p1_txt_q_13" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <p className="mb-4 mt-8 italic">Há três situações nas quais seus sentimentos autenticam sua adoração a Deus:</p>
@@ -301,11 +301,11 @@ export const bookData: Chapter[] = [
           <div className="space-y-6">
             <div>
               <p className="mb-2 text-rose-700 dark:text-rose-400 font-bold">• A sua realidade representa algo diferente desses três?</p>
-              <ReflectionInput question="A sua realidade representa algo diferente desses três?" id="p1_txt_q_14" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="3. Adoração em Espírito" question="A sua realidade representa algo diferente desses três?" id="p1_txt_q_14" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 text-rose-700 dark:text-rose-400 font-bold">• E qual seria sua realidade?</p>
-              <ReflectionInput question="E qual seria sua realidade?" id="p1_txt_q_15" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="3. Adoração em Espírito" question="E qual seria sua realidade?" id="p1_txt_q_15" placeholder="Escreva sua reflexão aqui..." />
             </div>
           </div>
         </HighlightBox>
@@ -314,15 +314,15 @@ export const bookData: Chapter[] = [
           <ul className="list-none space-y-6 font-medium">
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Do que acha que deve se arrepender?</span>
-              <ReflectionInput question="Do que acha que deve se arrepender?" id="p1_div_q_7" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="3. Adoração em Espírito" question="Do que acha que deve se arrepender?" id="p1_div_q_7" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• O que sente que deve pedir a Deus agora?</span>
-              <ReflectionInput question="O que sente que deve pedir a Deus agora?" id="p1_div_q_8" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="3. Adoração em Espírito" question="O que sente que deve pedir a Deus agora?" id="p1_div_q_8" placeholder="Escreva sua reflexão aqui..." />
             </li>
             <li>
               <span className="block text-rose-700 dark:text-rose-400 font-bold mb-1">• Como acredita que Cristo e sua obra te ajuda nisso?</span>
-              <ReflectionInput question="Como acredita que Cristo e sua obra te ajuda nisso?" id="p1_div_q_9" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="3. Adoração em Espírito" question="Como acredita que Cristo e sua obra te ajuda nisso?" id="p1_div_q_9" placeholder="Escreva sua reflexão aqui..." />
             </li>
           </ul>
         </ActionBox>
@@ -346,7 +346,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2">Como isso alinha todo o meu ser em relação a adoração?</p>
-          <ReflectionInput question="Como isso alinha todo o meu ser em relação a adoração?" id="p1_txt_q_16" placeholder="Escreva sua reflexão aqui..." />
+          <ReflectionInput chapterTitle="4. Adoração em Verdade" question="Como isso alinha todo o meu ser em relação a adoração?" id="p1_txt_q_16" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <h3 className="text-xl font-bold mb-4 mt-10 text-rose-700 dark:text-rose-400 uppercase">O FRUTO DO SEU ENCANTAMENTO COM DEUS É QUE É ADORAÇÃO.</h3>
@@ -369,15 +369,15 @@ export const bookData: Chapter[] = [
           <div className="space-y-6">
             <div>
               <p className="mb-2 font-medium">• Como essa compreensão pode afetar positivamente os louvores na congregação?</p>
-              <ReflectionInput question="Como essa compreensão pode afetar positivamente os louvores na congregação?" id="p1_txt_q_17" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="4. Adoração em Verdade" question="Como essa compreensão pode afetar positivamente os louvores na congregação?" id="p1_txt_q_17" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Como essa compreensão pode afetar positivamente a escolha das letras das canções?</p>
-              <ReflectionInput question="Como essa compreensão pode afetar positivamente a escolha das letras das canções?" id="p1_txt_q_18" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="4. Adoração em Verdade" question="Como essa compreensão pode afetar positivamente a escolha das letras das canções?" id="p1_txt_q_18" placeholder="Escreva sua reflexão aqui..." />
             </div>
             <div>
               <p className="mb-2 font-medium">• Como essa compreensão pode afetar positivamente a programação da liturgia?</p>
-              <ReflectionInput question="Como essa compreensão pode afetar positivamente a programação da liturgia?" id="p1_txt_q_19" placeholder="Escreva sua reflexão aqui..." />
+              <ReflectionInput chapterTitle="4. Adoração em Verdade" question="Como essa compreensão pode afetar positivamente a programação da liturgia?" id="p1_txt_q_19" placeholder="Escreva sua reflexão aqui..." />
             </div>
           </div>
         </HighlightBox>
@@ -398,7 +398,7 @@ export const bookData: Chapter[] = [
 
         <HighlightBox title="PERGUNTA SALIENTE">
           <p className="mb-2">Como esta verdade toca em você?</p>
-          <ReflectionInput question="Como esta verdade toca em você?" id="p1_txt_q_20" placeholder="Escreva sua reflexão aqui..." />
+          <ReflectionInput chapterTitle="4. Adoração em Verdade" question="Como esta verdade toca em você?" id="p1_txt_q_20" placeholder="Escreva sua reflexão aqui..." />
         </HighlightBox>
 
         <h3 className="text-xl font-bold mb-4 mt-10 text-rose-700 dark:text-rose-400 uppercase">INTENSIDADE SEM VERDADE NÃO É ADORAÇÃO VERDADEIRA.</h3>

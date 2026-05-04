@@ -68,7 +68,8 @@ service cloud.firestore {
       return data.keys().hasAll(['content']) 
         && data.content is string
         && data.get('updatedAt', '') is string
-        && data.get('question', '') is string;
+        && (!data.keys().hasAny(['question']) || data.get('question', '') is string)
+        && (!data.keys().hasAny(['chapterTitle']) || data.get('chapterTitle', '') is string);
     }
 
     match /users/{userId}/reflections/{reflectionId} {

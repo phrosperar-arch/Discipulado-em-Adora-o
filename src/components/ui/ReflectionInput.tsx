@@ -8,9 +8,10 @@ interface ReflectionInputProps {
   id: string;
   placeholder?: string;
   question?: string;
+  chapterTitle?: string;
 }
 
-export function ReflectionInput({ id, placeholder = "Escreva sua reflexão aqui...", question }: ReflectionInputProps) {
+export function ReflectionInput({ id, placeholder = "Escreva sua reflexão aqui...", question, chapterTitle }: ReflectionInputProps) {
   const [value, setValue] = useState("");
   const [status, setStatus] = useState<"idle" | "saving" | "saved">("idle");
   const [userId, setUserId] = useState<string | null>(null);
@@ -49,6 +50,9 @@ export function ReflectionInput({ id, placeholder = "Escreva sua reflexão aqui.
       if (question) {
         dataToSave.question = question;
       }
+      if (chapterTitle) {
+        dataToSave.chapterTitle = chapterTitle;
+      }
       await setDoc(docRef, dataToSave, { merge: true });
       setStatus("saved");
       setTimeout(() => setStatus("idle"), 2000);
@@ -56,7 +60,7 @@ export function ReflectionInput({ id, placeholder = "Escreva sua reflexão aqui.
       console.error("Error saving reflection", err);
       setStatus("idle");
     }
-  }, [userId, id, question]);
+  }, [userId, id, question, chapterTitle]);
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
